@@ -42,6 +42,7 @@ public class HelloWorld {
         return findById(20).toString();
     }
 
+    //Esta clase no tiene highCohesion porque tiene acceso a datos y se mezcla  con helloworld
     public Student findById(int studentId) {
         List result = jdbcTemplate.query("SELECT * FROM student WHERE student_id = 10;",
                 new Object[]{}, (resultSet, i) -> {
